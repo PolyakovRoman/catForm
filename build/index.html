@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>catForm</title>
+</head>
+<body>
+
+    <!--
+        у полей
+    
+        data-required="true" - обязательное поле. По умолчанию false (пока только для input и textarea).
+        data-name="Имя поля" - название поля, отправляемое обработчику. По умолчанию приоритет data-name, затем placeholder, затем label, затем name поля.
+    
+        у form
+    
+        data-name="" - название формы. Приорететно data-name, затем name.
+        data-required-class="" - css класс, который будет применен к незаполненному полю.
+        data-loader-class="" - css класс лоадера (по умолчанию display block; display none - в случае завершения процесса)
+        data-loader-class-activation="" - Селектор, который будет применен к data-loader-selector в начале выполнения и затем удалит его по завершению процесса. (должен быть задан data-loader-class)
+        button-deactivating-class="" - Класс, который будет применен к кнопке во время загрузки.
+    -->
+    
+    <form action="result.php" method="get" name="Название формы" data-name="Название формы data-name" class="catForm" novalidate="novalidate">
+    
+        <table>
+            <tr>
+                <td colspan="3">
+                    <label for="input-text-form">Текстовое поле</label><br>
+                    <input name="input-text" type="text" id="input-text-form" data-required="true">
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="3">
+                    <textarea name="textarea-form" placeholder="textarea"></textarea>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <input name="checkbox" type="checkbox" value="1" data-name="select checkbox">
+                </td>
+                <td>
+                    <input name="checkbox" type="checkbox" value="2" data-name="select checkbox">
+                </td>
+                <td>
+                    <input name="checkbox" type="checkbox" value="3" data-name="select checkbox">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <input name="radio" type="radio" value="1">
+                </td>
+                <td>
+                    <input name="radio" type="radio" value="2">
+                </td>
+                <td>
+                    <input name="radio" type="radio" value="3">
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="3">
+                    <select name="select" size="3" multiple data-name="select data-name">
+                        <option value="0">Один</option>
+                        <option value="1">Два</option>
+                        <option value="2">Три</option>
+                    </select>
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="3">
+                    <button class="button" type="submit">Отправить</button>
+                </td>
+            </tr>
+        </table>
+    
+    </form>
+
+</body>
+</html>
