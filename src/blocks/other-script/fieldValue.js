@@ -4,15 +4,15 @@ function fieldValueCatForm(formObject, fieldObject, this_each, valueAllArr) {
 
     if(typeof($(fieldObject).attr("id")) != "undefined" && $.trim($(fieldObject).attr("id")) != ""){
 
-        var idName = $.trim($(fieldObject).attr("id"));
+        var fieldId = $.trim($(fieldObject).attr("id"));
 
-        if(typeof($("#" + idName).attr("data-name")) != "undefined" && $("#" + idName).attr("data-name") != false){
+        if(typeof($("#" + fieldId).attr("data-name")) != "undefined" && $("#" + fieldId).attr("data-name") != false){
 
-            var valueName = $("#" + idName).attr("data-name");
+            var fieldName = $("#" + fieldId).attr("data-name");
 
-            if($.trim(valueName) != "" && typeof(valueName) != "undefined"){
+            if($.trim(fieldName) != "" && typeof(fieldName) != "undefined"){
 
-                return fieldArrayCatForm(valueAllArr, valueName, this_each);
+                return fieldArrayCatForm(valueAllArr, fieldName, this_each);
 
             }else{
 
@@ -21,17 +21,17 @@ function fieldValueCatForm(formObject, fieldObject, this_each, valueAllArr) {
             }
         }else{
 
-            if(typeof($("#" + idName).attr("placeholder")) != "undefined" && $("#" + idName).attr("placeholder") != false && $.trim($("#" + idName).attr("placeholder")) != ""){
+            if(typeof($("#" + fieldId).attr("placeholder")) != "undefined" && $("#" + fieldId).attr("placeholder") != false && $.trim($("#" + fieldId).attr("placeholder")) != ""){
 
-                var valueName = $("#" + idName).attr("placeholder");
-                return fieldArrayCatForm(valueAllArr, valueName, this_each);
+                var fieldPlaceholder = $("#" + fieldId).attr("placeholder");
+                return fieldArrayCatForm(valueAllArr, fieldPlaceholder, this_each);
 
             }else{
 
-                if($(formObject).find("label[for = '"+ idName +"']").length > 0){
+                if($(formObject).find("label[for = '"+ fieldId +"']").length > 0){
 
-                    var valueName = $(formObject).find("label[for = '"+ idName +"']").text();
-                    return fieldArrayCatForm(valueAllArr, valueName, this_each);
+                    var fieldlabel = $(formObject).find("label[for = '"+ fieldId +"']").text();
+                    return fieldArrayCatForm(valueAllArr, fieldlabel, this_each);
 
                 }else{
 
@@ -50,20 +50,20 @@ function fieldValueCatForm(formObject, fieldObject, this_each, valueAllArr) {
 
         if(typeof(name != "undefined")){
 
-            var valueName = $.trim($(fieldObject).attr("data-name"));
+            var fieldName = $.trim($(fieldObject).attr("data-name"));
 
-            if($.trim(valueName) != "" && typeof(valueName) != "undefined"){
+            if($.trim(fieldName) != "" && typeof(fieldName) != "undefined"){
 
-                return fieldArrayCatForm(valueAllArr, valueName, this_each);
+                return fieldArrayCatForm(valueAllArr, fieldName, this_each);
 
 
             }else{
 
-                valueName = $.trim($(fieldObject).attr("placeholder"));
+                var fieldPlaceholder = $.trim($(fieldObject).attr("placeholder"));
 
-                if($.trim(valueName) != "" && typeof(valueName) != "undefined"){
+                if($.trim(fieldPlaceholder) != "" && typeof(fieldPlaceholder) != "undefined"){
 
-                    return fieldArrayCatForm(valueAllArr, valueName, this_each);
+                    return fieldArrayCatForm(valueAllArr, fieldPlaceholder, this_each);
 
                 }else{
 

@@ -1,4 +1,4 @@
-/* функция, вополняема во время отправки формы ajax'ом */
+/* функция, вополняемая во время отправки формы ajax'ом */
 function executionCatForm(start, formObject, selector, selectorActivation, buttonDeactivatingClass) {
 
     var objectButton;
@@ -25,11 +25,11 @@ function executionCatForm(start, formObject, selector, selectorActivation, butto
 
                 if(selectorActivation){
 
-                    $("." + selector).addClass(selectorActivation);
+                    $(formObject).find($("." + selector)).addClass(selectorActivation);
 
                 }else{
 
-                    $("." + selector).show();
+                    $(formObject).find($("." + selector)).show();
 
                 }
 
@@ -67,11 +67,11 @@ function executionCatForm(start, formObject, selector, selectorActivation, butto
 
                 if(selectorActivation){
 
-                    $("." + selector).removeClass(selectorActivation);
+                    $(formObject).find($("." + selector)).removeClass(selectorActivation);
 
                 }else{
 
-                    $("." + selector).hide();
+                    $(formObject).find($("." + selector)).hide();
 
                 }
 
@@ -87,7 +87,7 @@ function executionCatForm(start, formObject, selector, selectorActivation, butto
 
                 }
 
-                $(".catFrom__loader").remove();
+                $(formObject).find($(".catFrom__loader")).remove();
 
             }
 

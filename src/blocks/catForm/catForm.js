@@ -24,7 +24,7 @@ $(document).ready(function(){
         if(typeof(dataLoaderSelectorActivation) == "undefined" || $.trim(dataLoaderSelectorActivation) == ""){
             dataLoaderSelectorActivation = false;
         }
-        var dataButtonDeactivatingClass = $(formObject).attr("button-deactivating-class");
+        var dataButtonDeactivatingClass = $(formObject).attr("data-button-deactivating-class");
         if(typeof(dataButtonDeactivatingClass) == "undefined" || $.trim(dataButtonDeactivatingClass) == ""){
             dataButtonDeactivatingClass = false;
         }
@@ -150,14 +150,14 @@ $(document).ready(function(){
 
                                     }else{
 
-                                        openProcessingResultCatForm("Сервер не вернул верный ответ", "error");
+                                        openProcessingResultCatForm("Сервер вернул неверный ответ", "error");
 
                                         executionCatForm(false, formObject, dataLoaderSelector, dataLoaderSelectorActivation, dataButtonDeactivatingClass);
 
                                     }
                                 }else{
 
-                                    openProcessingResultCatForm("Сервер не вернул верный ответ", "error");
+                                    openProcessingResultCatForm("Сервер вернул неверный ответ", "error");
 
                                     executionCatForm(false, formObject, dataLoaderSelector, dataLoaderSelectorActivation, dataButtonDeactivatingClass);
 

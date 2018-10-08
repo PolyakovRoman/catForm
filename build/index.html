@@ -21,11 +21,10 @@
         data-required-class="" - css класс, который будет применен к незаполненному полю.
         data-loader-class="" - css класс лоадера (по умолчанию display block; display none - в случае завершения процесса)
         data-loader-class-activation="" - Селектор, который будет применен к data-loader-selector в начале выполнения и затем удалит его по завершению процесса. (должен быть задан data-loader-class)
-        button-deactivating-class="" - Класс, который будет применен к кнопке во время загрузки.
+        data-button-deactivating-class="" - Класс, который будет применен к кнопке во время загрузки.
     -->
     
     <form action="result.php" method="get" name="Название формы" data-name="Название формы data-name" class="catForm" novalidate="novalidate">
-    
         <table>
             <tr>
                 <td colspan="3">
@@ -80,7 +79,6 @@
                 </td>
             </tr>
         </table>
-    
     </form>
 
 </body>

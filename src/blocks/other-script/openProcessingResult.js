@@ -1,4 +1,4 @@
-/* функция отображения результат работы скрипта */
+/* функция отображения результата работы скрипта */
 function openProcessingResultCatForm(text, type) {
 
     var mess = text;
